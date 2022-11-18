@@ -109,7 +109,7 @@ export default {
 		const response = await axios.get('/api/services/');
 
 		const responseCustomer = await axios.get(
-			`/api/customers/${this.$route.params.id}`
+			`/api/customers/${this.$route.params.id}/`
 		);
 		this.firstname = responseCustomer.data.firstname;
 		this.lastname = responseCustomer.data.lastname;
@@ -151,7 +151,7 @@ export default {
 				};
 				try {
 					const response = await axios.put(
-						`/api/customers/${this.$route.params.id}`,
+						`/api/customers/${this.$route.params.id}/`,
 						formData
 					);
 					this.$router.push('/');

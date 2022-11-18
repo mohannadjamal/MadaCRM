@@ -64,7 +64,7 @@ class CustomersList(APIView):
 #        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class CustomersDetail(generics.RetrieveDestroyAPIView):
+class CustomersDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Customers.objects.all()
     serializer_class = CustomersSerializer
 
