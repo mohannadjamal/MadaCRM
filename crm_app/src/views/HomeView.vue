@@ -27,6 +27,7 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th scope="col">ID</th>
 						<th scope="col">First Name</th>
 						<th scope="col">Last Name</th>
 						<th scope="col">Phone</th>
@@ -36,6 +37,7 @@
 				</thead>
 				<tbody>
 					<tr v-for="customer in customers">
+						<td>{{ customer.id }}</td>
 						<td>{{ customer.firstname }}</td>
 						<td>{{ customer.lastname }}</td>
 						<td>{{ customer.phone }}</td>

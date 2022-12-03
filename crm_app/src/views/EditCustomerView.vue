@@ -149,6 +149,7 @@ export default {
 					phone: this.phone,
 					services: this.selectedServices,
 				};
+				console.log(formData)
 				try {
 					const response = await axios.put(
 						`/api/customers/${this.$route.params.id}/`,
