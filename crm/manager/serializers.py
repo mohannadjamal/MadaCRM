@@ -27,8 +27,7 @@ class CustomersSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         services_data = validated_data.pop('services')
-        Customers.objects.get(id=instance.id).delete()
-        customer = Customers.objects.create(**validated_data)
+        Customers.objects.get(id=instance.id).update(**validated_data)
         for data in services_data:
             service, created = Services.objects.get_or_create(**data)
             customer.services.add(service)
