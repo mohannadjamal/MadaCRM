@@ -40,5 +40,5 @@ class CustomersSerializer(serializers.ModelSerializer):
             service, created = Services.objects.get_or_create(**data)
             #customer.services.add(service)
             instance.services.add(service)
-        instance.save()
+        instance.save(update_fields=['firstname', 'lastname', 'phone'])
         return instance
